@@ -1,0 +1,21 @@
+:root {
+  --beige: #d2ac7f;
+  --brown: #804b2e;
+  --almost-black: #3f3e46;
+  --black: #000;
+  --white: #fff;
+  --grey: #939393;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Tajawal';
+  background-color: var(--white);
+}
+
+body {
+  margin: 0;
+  color: var(--white);
+}
+
+/* HERO */
