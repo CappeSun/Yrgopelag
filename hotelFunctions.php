@@ -4,7 +4,6 @@ function connect(string $dbName): PDO
 {
     $dbPath = 'sqlite:yrgopelag.sqlite3';
 
-    echo "Database Path: $dbPath<br>";
 
     try {
         $pdo = new PDO("sqlite:$dbPath");

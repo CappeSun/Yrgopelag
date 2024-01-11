@@ -44,24 +44,26 @@ function bookRoom(PDO $pdo, $room, $arrival, $departure, $guest, $transferCode)
         return false;
     }
 
-    $transferCode = guidv4();
+
+    $numberOfDays = (strtotime($departure) - strtotime($arrival)) / (60 * 60 * 24);
 
 
-    $priceSql = "SELECT price FROM prices WHERE room = '$room'";
-    $priceResult = $pdo->query($priceSql);
+    $dailyRate = 10;
 
-    if ($priceResult && $priceResult->rowCount() > 0) {
-        $row = $priceResult->fetch(PDO::FETCH_ASSOC);
-        $cost = $row['price'] * (strtotime($departure) - strtotime($arrival)) / (60 * 60 * 24);
-    } else {
-        return false;
-    }
+
+    $cost = $numberOfDays * $dailyRate;
 
     $insertSql = "INSERT INTO guests (arrival, departure, guest, room, cost, transfer_code)
         VALUES ('$arrival', '$departure', '$guest', '$room', '$cost', '$transferCode')";
 
     $stmt = $pdo->prepare($insertSql);
     if ($stmt->execute()) {
+
+        echo "Total Cost: €$cost<br>";
+
+
+        $response['total_cost'] = $cost;
+
         return true;
     } else {
         return false;
