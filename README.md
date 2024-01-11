@@ -1,10 +1,10 @@
 WHY NOT A GIF HERE? TO SET THE MOOD.
 
-# Island name
+# Frosty Island
 
 Some text about your lovely island
 
-# Hotel name
+# Nordic Frost Hotel
 
 Why not add some info about the hotel of your dreams?
 
