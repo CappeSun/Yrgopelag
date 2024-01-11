@@ -197,3 +197,32 @@ h5,
 .h3-facility {
   color: var(--white);
 }
+
+/* ACTIVITY */
+
+.activity1,
+.activity2,
+.activity3 {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.book-activities {
+  width: 240px;
+  height: 47px;
+  background-color: var(--beige);
+  color: var(--brown);
+  border: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+}
+
+/* DESKTOP */
+
+@media (min-width: 1000px) {
+}

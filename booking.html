@@ -1,0 +1,35 @@
+<!-- index.php -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+  </head>
+  <body>
+    <h2>Hotel Booking Form</h2>
+
+    <form action="process.php" method="post">
+      <label for="room">Room Type:</label>
+      <select name="room" id="room">
+        <option value="standard">Standard</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="suite">Suite</option></select
+      ><br />
+
+      <label for="arrival">Arrival Date:</label>
+      <input type="date" name="arrival" required /><br />
+
+      <label for="departure">Departure Date:</label>
+      <input type="date" name="departure" required /><br />
+
+      <label for="guest">Guest Name:</label>
+      <input type="text" name="guest" required /><br />
+
+      <label for="transferCode">Transfer Code:</label>
+      <input type="text" name="transferCode" required /><br />
+
+      <input type="submit" value="Book Now" />
+    </form>
+  </body>
+</html>

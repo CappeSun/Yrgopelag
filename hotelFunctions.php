@@ -1,31 +1,19 @@
 <?php
 
-/* 
-Here's something to start your career as a hotel manager.
-
-One function to connect to the database you want (it will return a PDO object which you then can use.)
-    For instance: $db = connect('hotel.db');
-                  $db->prepare("SELECT * FROM bookings");
-                  
-one function to create a guid,
-and one function to control if a guid is valid.
-*/
-
-function connect(string $dbName): object
+function connect(string $dbName): PDO
 {
-    $dbPath = __DIR__ . '/' . $dbName;
+    $dbPath = __DIR__ . '/yrgopelag.sqlite3' . $dbName;
     $db = "sqlite:$dbPath";
 
-    // Open the database file and catch the exception if it fails.
     try {
-        $db = new PDO($db);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $pdo = new PDO($db);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "Failed to connect to the database";
         throw $e;
     }
-    return $db;
+    return $pdo;
 }
 
 function guidv4(string $data = null): string
@@ -49,4 +37,9 @@ function isValidUuid(string $uuid): bool
         return false;
     }
     return true;
+}
+
+
+function bookRoom(PDO $pdo, $room, $arrival, $departure, $guest, $transferCode)
+{
 }
