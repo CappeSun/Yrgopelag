@@ -122,3 +122,78 @@ h1 {
   top: 22.5px;
   right: 60px;
 }
+
+/* ABOUT */
+
+h3 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.about-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.about-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* SLIDER  */
+
+/* FACILITY */
+
+.facility-background {
+  height: 400px;
+  width: 100%;
+  background-image: url(images/facility.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 200px 200px 200px 0px rgba(0, 0, 0, 0.36) inset;
+}
+
+.block-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+}
+
+.sauna-container,
+.restaurant-container,
+.parking-container,
+.wifi-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3,
+h5,
+.sauna-svg,
+.restaurant-svg,
+.parking-svg,
+.wifi-svg {
+  background-color: transparent;
+}
+
+.h3-facility {
+  color: var(--white);
+}
