@@ -1,4 +1,5 @@
 <?php
+
 include 'hotelFunctions.php';
 
 $dbName = 'yrgopelag.sqlite3';
@@ -12,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $arrival = $_POST['arrival'];
     $departure = $_POST['departure'];
     $guest = $_POST['guest'];
-    $transferCode = $_POST['transferCode']; // Retrieve transfer code from the form
+    $transferCode = $_POST['transferCode'];
 
-    if (verifyTransferCode($transferCode)) { // Add a function to verify the transfer code
+    if (verifyTransferCode($transferCode)) {
         if (bookRoom($pdo, $room, $arrival, $departure, $guest, $transferCode)) {
             $response['success'] = true;
             $response['message'] = "Booking Successful!";

@@ -44,6 +44,9 @@ function bookRoom(PDO $pdo, $room, $arrival, $departure, $guest, $transferCode)
         return false;
     }
 
+    $transferCode = guidv4();
+
+
     $priceSql = "SELECT price FROM prices WHERE room = '$room'";
     $priceResult = $pdo->query($priceSql);
 

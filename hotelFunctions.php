@@ -2,19 +2,23 @@
 
 function connect(string $dbName): PDO
 {
-    $dbPath = __DIR__ . '/yrgopelag.sqlite3' . $dbName;
-    $db = "sqlite:$dbPath";
+    $dbPath = 'sqlite:yrgopelag.sqlite3';
+
+    echo "Database Path: $dbPath<br>";
 
     try {
-        $pdo = new PDO($db);
+        $pdo = new PDO("sqlite:$dbPath");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo "Failed to connect to the database";
         throw $e;
     }
+
     return $pdo;
 }
+
+
 
 function guidv4(string $data = null): string
 {
