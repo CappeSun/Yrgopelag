@@ -135,105 +135,6 @@ h1 {
   right: 60px;
 }
 
-/* ABOUT */
-
-h3 {
-  font-size: 28px;
-}
-
-h5 {
-  font-size: 12px;
-  line-height: 28px;
-  text-align: center;
-}
-
-.about-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px;
-}
-
-.about-image {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* SLIDER  */
-
-/* FACILITY */
-
-.facility-background {
-  height: 400px;
-  width: 100%;
-  background-image: url(images/facility.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 200px 200px 200px 0px rgba(0, 0, 0, 0.36) inset;
-}
-
-.block-container {
-  display: flex;
-  justify-content: center;
-
-  height: 100%;
-  background-color: transparent;
-}
-
-.sauna-container,
-.restaurant-container,
-.parking-container,
-.wifi-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h3,
-h5,
-.sauna-svg,
-.restaurant-svg,
-.parking-svg,
-.wifi-svg {
-  background-color: transparent;
-}
-
-.h3-facility {
-  color: var(--white);
-}
-
-/* ACTIVITY */
-
-.activity1,
-.activity2,
-.activity3 {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.book-activities {
-  width: 240px;
-  height: 47px;
-  background-color: var(--beige);
-  color: var(--brown);
-  border: none;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  align-content: center;
-}
-
 /* DESKTOP */
 
 @media (min-width: 1000px) {
@@ -254,74 +155,12 @@ h5,
     font-size: 28px;
   }
   .hero {
-    width: auto;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .about-container {
-    padding: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .about-text {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .about-image {
-    flex: 1;
-    max-width: 100%;
-    padding: 20px;
-  }
-  .h3-facility {
-    text-align: center;
-    padding-top: 40px;
-    font-size: 70px;
-  }
-  .block-container {
-    gap: 60px;
-    height: 100px;
-  }
-  .activities-container {
-    padding: 80px;
-  }
-  h3 {
-    text-align: center;
-    font-size: 50px;
-    margin: 30px;
-  }
-  .activities-images-container {
-    display: none;
-  }
-
-  .activities-container {
-    padding: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .activity-text {
-    flex: 1;
-    padding: 40px;
-  }
-
-  .activity-image-desktop {
-    flex: 1;
-    max-width: 100%;
-    padding: 40px;
-    object-fit: cover;
-    height: 480px;
-    width: 300px;
-    display: block;
-  }
-  .book-activities {
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
+  .background-hero {
+    height: 150px;
   }
   .slider-container {
     text-align: center;
@@ -340,5 +179,56 @@ h5,
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  p {
+    text-align: center;
+    font-size: 40px;
+  }
+  .form {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  form {
+    text-align: center;
+    width: 300px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  label {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: var(--beige);
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+  }
+
+  input[type='submit'] {
+    width: auto;
+  }
+  .book-button {
+    height: 50px;
+    color: var(--brown);
+    font-size: 24px;
   }
 }
